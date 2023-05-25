@@ -9,8 +9,8 @@
 <body>
     <p class="content"></p>
     <script>
-        window.onload = {
-            setInterval(changeContent, 2000);
+        window.onload = () => {
+            setInterval(changeContent, 2000)
         };
 
         function changeContent()
@@ -21,7 +21,7 @@
 
             for (let index = 0; index < 20; index++) {
 
-                let char = (String) (Math.floor(Math.random() * array.length));
+                let char = (String) (Math.floor(Math.random() * chars.length));
                 string += (Math.floor(Math.random()) == 0 ? char.toUpperCase() : char.toLowerCase());
             }
 
